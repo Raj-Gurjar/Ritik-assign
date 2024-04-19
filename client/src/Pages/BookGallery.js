@@ -64,7 +64,7 @@ export default function BookGallary() {
       <div className="mx-5">
         <h1 className="float-left text-2xl ">See all the Books</h1>
         <button className="float-right">
-          <Link to="/books/add"> Add Book</Link>
+          <Link to="/books/add" className="text-[17px] px-3 font-semibold"> Add A Book</Link>
         </button>
       </div>
 
@@ -80,7 +80,7 @@ export default function BookGallary() {
           {allBooksData.map((book) => (
             <div
               key={book._id}
-              className="bg-[#ffff] flex gap-5 m-5 flex-col w-[300px] p-5 rounded-md"
+              className="bg-[#e0bdbd] flex gap-5 m-5 flex-col w-[300px] p-5 rounded-md"
             >
               <p>Book Cover</p>
               <p> Book name: {book.title}</p>
@@ -89,7 +89,7 @@ export default function BookGallary() {
                 onClick={() => {
                   viewDetails(book._id);
                 }}
-                className="bg-green-500 cursor-pointer m-auto "
+                className="cursor-pointer m-auto "
               >
                 Know More
               </button>

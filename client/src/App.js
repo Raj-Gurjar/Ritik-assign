@@ -3,7 +3,6 @@ import "./App.scss";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Auth/Login";
 import SignUp from "./Pages/Auth/SignUp";
-import About from "./Pages/About";
 import Error from "./Pages/Error";
 import BookGallery from "./Pages/BookGallery";
 import Navbar from "./Components/Navbar/Navbar";
@@ -18,7 +17,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
 
-          <Route path="/about" element={<About />} />
+         
           <Route path="/signin" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/books/allBooks" element={<BookGallery />} />

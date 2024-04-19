@@ -37,11 +37,7 @@ const Navbar = () => {
                   Home
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/about" onClick={() => setMenuOpen(false)}>
-                  About
-                </NavLink>
-              </li>
+            
             </ul>
           </div>
           <div className="auth-section">
