@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import "./log.scss";
+import "./Auth/log.scss";
 import { Link } from "react-router-dom";
 
 import GlobalContext from "../Context/GlobalContext";
@@ -100,7 +100,7 @@ export default function AddBook() {
         <label htmlFor="description">Description:</label>
         <textarea
           id="description"
-          className="text-black-500 bg-slate-400"
+          className="text-black-500 bg-slate-300"
           name="description"
           value={formData.description}
           onChange={changeHandler}

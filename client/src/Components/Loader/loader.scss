@@ -1,6 +1,6 @@
 /* loader.scss */
 .loader-cntnr {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -8,8 +8,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(68, 67, 67, 0.393); /* Semi-transparent white background */
-    z-index: 1000; /* Ensure the loader appears above other content */
+    background-color: rgba(68, 67, 67, 0.393); 
+    z-index: 1000; 
 }
 
 .loader {

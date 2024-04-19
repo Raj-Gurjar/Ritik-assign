@@ -92,6 +92,7 @@
         .auth-section {
             display: flex;
             align-items: center;
+            
 
             button {
                 margin-left: 10px;
@@ -144,6 +145,8 @@
 
             .auth-section {
                 margin-top: 10px;
+                flex-direction: column;
+                gap:10px;
             }
         }
     }

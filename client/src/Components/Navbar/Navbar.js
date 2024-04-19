@@ -53,7 +53,16 @@ const Navbar = () => {
                     setMenuOpen(false);
                   }}
                 >
-                  <button>Customer Login</button>
+                  <button>Login</button>
+                </Link>
+
+                <Link
+                  to="/signup"
+                  onClick={() => {
+                    setMenuOpen(false);
+                  }}
+                >
+                  <button>SignUp</button>
                 </Link>
               </>
             )}

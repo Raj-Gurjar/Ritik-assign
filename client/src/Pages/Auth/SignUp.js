@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import "./log.scss";
 import { Link } from "react-router-dom";
 
-import GlobalContext from "../Context/GlobalContext";
-import Loader from "../Components/Loader/Loader";
+import GlobalContext from "../../Context/GlobalContext";
+import Loader from "../../Components/Loader/Loader";
 
 export default function SignUp() {
   const { setIsLoggedIn, signUpApi } = useContext(GlobalContext);

@@ -10,7 +10,7 @@ export default function BookDetails() {
   const params = useParams();
   const bookId = params.id;
 
-//   console.log("id :", bookId);
+  //   console.log("id :", bookId);
 
   const { getBook } = useContext(GlobalContext);
   const navigate = useNavigate();
@@ -55,10 +55,13 @@ export default function BookDetails() {
     }
   };
   return (
-    <div>
-      <h1>Full Details of {bookDetails.title}</h1>
+    <div className="flex justify-center align-middle text-center flex-col">
+      <h1 className="text-3xl my-5 font-semibold">
+        Full Details of
+        <span className="text-[#38BDF8] font-bold text-4xl"> {bookDetails.title}</span>
+      </h1>
 
-      <div>
+      <div className="text-2xl my-10">
         <p>Book Cover</p>
 
         <p>Book Name : {bookDetails.title}</p>
@@ -69,9 +72,7 @@ export default function BookDetails() {
 
       <div>
         <p>Book's Reviews</p>
-        {
-
-        }
+        {}
       </div>
     </div>
   );

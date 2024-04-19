@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import toast from "react-hot-toast";
 import { useNavigate, Link } from "react-router-dom";
-import "./log.scss";
 
 import GlobalContext from "../Context/GlobalContext";
 import SearchBar from "../Components/SearchBar";
@@ -59,15 +58,17 @@ export default function BookGallary() {
   };
 
   return (
-    <div>
-      <h1>Hello !! {user.name}</h1>
-      <h1>See all the Books</h1>
+    <div className="flex flex-col justify-center align-middle text-center">
+      <h1 className="my-3 text-2xl">Hello👋 {user.name}</h1>
 
-      <button>
-        <Link to="/books/add"> Add Book</Link>
-      </button>
+      <div className="mx-5">
+        <h1 className="float-left text-2xl ">See all the Books</h1>
+        <button className="float-right">
+          <Link to="/books/add"> Add Book</Link>
+        </button>
+      </div>
 
-      <div>
+      <div className="bg-slate-300 my-5">
         <p>Search Here</p>
         <SearchBar />
       </div>
@@ -75,23 +76,23 @@ export default function BookGallary() {
       {allBooksData.length === 0 ? (
         <p>No book to show</p>
       ) : (
-        <div>
+        <div className="border-2 border-black-300  flex flex-wrap m-5 justify-evenly rounded-md">
           {allBooksData.map((book) => (
             <div
               key={book._id}
-              className="bg-red-300 flex gap-5 m-5 flex-col w-[30%]"
+              className="bg-[#ffff] flex gap-5 m-5 flex-col w-[300px] p-5 rounded-md"
             >
               <p>Book Cover</p>
               <p> Book name: {book.title}</p>
               <p> Book Author: {book.title}</p>
-              <span
+              <button
                 onClick={() => {
                   viewDetails(book._id);
                 }}
-                className="bg-green-500 cursor-pointer"
+                className="bg-green-500 cursor-pointer m-auto "
               >
                 Know More
-              </span>
+              </button>
             </div>
           ))}
         </div>
