@@ -55,8 +55,10 @@ exports.getAllBook = async (req, res) => {
 };
 
 exports.getBookDetail = async (req, res) => {
+  console.log("inside book details");
   try {
     const { id } = req.params;
+    console.log("id :", id);
     const book = await Book.findOne({ _id: id })
       .populate({ path: "reviews" })
       .populate({
@@ -64,7 +66,8 @@ exports.getBookDetail = async (req, res) => {
         populate: { path: "user", select: "name" },
       });
 
-    return res.status(400).json({
+     console.log("cp2", book);
+    return res.status(200).json({
       success: true,
       message: "Book details fetched successfully.",
       data: book,
